@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
     
-    root 'pages#index'
-    devise_for :users
+    devise_for :users, :controllers => { registrations: 'registrations' }
     
+    root 'pages#index'
   
     get 'pages/contact'
   
