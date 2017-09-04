@@ -5,9 +5,22 @@
 //= require_self
 //= require_tree ./channels
 
-(function() {
-  this.App || (this.App = {});
+$(document).ready(function () {
+  $("#sidebar").niceScroll({
+      cursorcolor: '#53619d',
+      cursorwidth: 4,
+      cursorborder: 'none'
+  });
 
-  App.cable = ActionCable.createConsumer();
+  $('#dismiss, .overlay').on('click', function () {
+     $('#sidebar').removeClass('active');
+     $('.overlay').fadeOut();
+  });
 
-}).call(this);
+  $('#sidebarCollapse').on('click', function () {
+      $('#sidebar').addClass('active');
+      $('.overlay').fadeIn();
+      $('.collapse.in').toggleClass('in');
+      $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+});
