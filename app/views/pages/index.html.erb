@@ -91,9 +91,9 @@
           <div class="col-page col-sm-4 col-md-3">
            <div class="todas-las-publicaciones-home">
                 <h4>Recent Posts</h4>
-               <% @articles.each do |a| %>
+                <% @articles.each do |a| %>
                 <strong><%= link_to a.title, a  %></strong>
-                <p> Created by: <%= a.user.username %></p>
+                <p> Created by: <%= a.user.firstname %></p>
                 <p><%= truncate(a.body) %></p>
                 <% end %>
                 
