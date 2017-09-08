@@ -28,11 +28,12 @@
      <h2 class="text-post-index">
         <%= (article.body).truncate_words(40) %>   
      </h2>
-     <%= link_to article do %> 
+     <%= link_to article, class:"read-me" do %> 
      Read me
      <% end %>
     </div>
     <% end %>
+    <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label:"Anterior", class:"will-page"%>
     </div>
   </div>
 </section>

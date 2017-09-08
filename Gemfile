@@ -29,6 +29,8 @@ gem 'devise', '~> 4.3'
 gem 'simple_form', '~> 3.5'
 gem 'oj', '~> 3.3', '>= 3.3.5'
 gem 'rollbar'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 
 
 group :development, :test do

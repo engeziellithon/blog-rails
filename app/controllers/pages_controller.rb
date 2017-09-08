@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def index
     @articles = Article.all
-    @last5 = Article.last(5)
+    @articles = Article.paginate(:page => params[:page], :per_page => 3)
   end
 
   def contact

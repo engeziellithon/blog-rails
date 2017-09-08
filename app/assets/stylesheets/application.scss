@@ -109,7 +109,7 @@ pre {
     font-size: 1.3em;
     font-weight: 400;
     line-height: 36px;
-    color: #515151;
+    color: #555555;
     text-align: justify;
 }
 .text-post
@@ -120,6 +120,9 @@ pre {
     line-height: 36px;
     color: #000;
     text-align: -webkit-auto;
+}
+.body-post-index{
+    margin-bottom: 20px;
 }
 
 .read-me
@@ -133,4 +136,27 @@ a:hover {
     color: #FF0000 !important;
     background: none !important;
     }
+
+.will-page{
+    margin-bottom: 50px !important;
     
+}
+.will-page, spam {
+    list-style-type: none;
+	display: inline-block;
+    transform: scale(1) rotate(19deg) translateX(0px) translateY(0px) skewX(-10deg) skewY(-20deg);
+    
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    line-height: 1.428571429;
+    text-decoration: none;
+    color:#910000;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    padding: 1.1em 1.6em !important;
+}
