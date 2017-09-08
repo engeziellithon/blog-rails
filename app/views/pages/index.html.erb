@@ -1,105 +1,41 @@
-
-    <section class="publicaciones-blog-home">
-    <div class="container">
-      <div class="">
-        <h2>Lorem  <b>Ipsum</b></h2>
-        <div class="row-page row">
-          <div class="col-page col-sm-8 col-md-6">
-            <a href="" class="black fondo-publicacion-home">
-              <div class="img-publicacion-principal-home">
-                <img class="" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-principal-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-page col-sm-4 col-md-3">
-            <a href=""  class="fondo-publicacion-home">
-              <div class="img-publicacion-home">
-                <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-page col-sm-4 col-md-3">
-            <a href="" class="fondo-publicacion-home">
-              <div class="img-publicacion-home">
-                <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-page col-sm-4 col-md-3">
-            <a href="" class="fondo-publicacion-home">
-              <div class="img-publicacion-home">
-                <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="hidden-sm col-page col-sm-4 col-md-3">
-            <a href="" class="fondo-publicacion-home">
-              <div class="img-publicacion-home">
-                <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="hidden-sm col-page col-sm-4 col-md-3">
-            <a href="" class="fondo-publicacion-home">
-              <div class="img-publicacion-home">
-                <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=34&txt=&w=500&h=300">
-              </div>
-              <div class="contenido-publicacion-home">
-                <h3>Neque porro quisquam est qui dolorem ipsum</h3>
-                <p>Lorem ipsum amet, consectetur adipiscing elit. Sed placerat porta ex, sed ullamcorper ipsum lacinia nec.<span>...</span></p>
-              </div>
-              <div class="mascara-enlace-blog-home">
-                <span>Lorem </span>
-              </div>
-            </a>
-          </div>
-          <div class="col-page col-sm-4 col-md-3">
-           <div class="todas-las-publicaciones-home">
-                <h4>Recent Posts</h4>
-                <% @articles.each do |a| %>
-                <strong><%= link_to a.title, a  %></strong>
-                <p> Created by: <%= a.user.username %></p>
-                <p><%= truncate(a.body) %></p>
-                <% end %>
-                
-           </div>
+<section class="post-index">
+  <div>
+    <div class="col-md-6">
+        <% @articles.each do |article| %>
+     <h1><%= link_to article.title, article, class:"large-title"%></h1>
+     <span>
+      <div class="editor-post-info">
+        <img src="https://images.moviepilot.com/image/upload/c_fill,h_64,q_auto,w_64/morgan-will-morgan-find-love-on-the-walking-dead-jpeg-203714.jpg" alt="" class="image-editor-index">
+        <div>
+            <%=  article.user.username %>
+          <div class="date-topips-posts">
+            <div class="date-post">
+            <%= article.created_at.strftime("%d %b. %Y") %>
+            </div>
+            <div>
+              <a href="/blog/topic/open-source" class="read-me">Topic</a>
+            
+              <a href="/blog/topic/github" class="read-me">Toppic 2</a>     
+            </div>
           </div>
         </div>
-      </div>
+      </div>   
+     </span>
+     <div class="blog-post__resource">
+        <%=  image_tag 'https://www.w3schools.com/css/img_fjords.jpg', class:"image-post-index"%>
     </div>
-  </section>
+    <div class="body-post-index">
+     <h2 class="text-post-index">
+        <%= (article.body).truncate_words(40) %>   
+     </h2>
+     <%= link_to article do %> 
+     Read me
+     <% end %>
+    </div>
+    <% end %>
+    </div>
+  </div>
+</section>
+
+
+

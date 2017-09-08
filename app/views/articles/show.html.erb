@@ -1,19 +1,41 @@
-<p id="notice"><%= notice %></p>
+<section class="post-index">
+    <div>
+      <div class="col-md-6">
+          
+       <h1><%= link_to @article.title, class:"large-title"%></h1>
+       <span>
+        <div class="editor-post-info">
+          <img src="https://images.moviepilot.com/image/upload/c_fill,h_64,q_auto,w_64/morgan-will-morgan-find-love-on-the-walking-dead-jpeg-203714.jpg" alt="" class="image-editor-index">
+          <div>
+              <%= @article.user.username %>
+            <div class="date-topips-posts">
+              <div class="date-post">
+              <%= @article.created_at.strftime("%d %b. %Y") %>
+              </div>
+              <div>
+                <a href="/blog/topic/open-source" class="read-me">Topic</a>
+              
+                <a href="/blog/topic/github" class="read-me">Toppic 2</a>     
+              </div>
+            </div>
+          </div>
+        </div>   
+       </span>
+       <div class="blog-post__resource">
+          <%=  image_tag 'https://www.w3schools.com/css/img_fjords.jpg', class:"image-post-index"%>
+      </div>
+      <div class="body-post-index">
+       <h2 class="text-post">
+          <%= @article.body %>   
+       </h2>
+       
+      </div>
+      <%= link_to 'Edit', edit_article_path(@article) %> |
+      <%= link_to 'Back', articles_path %>
+      </div>
+      
+    </div>
+   
+  </section>
 
-<p>
-  <strong>Create by:</strong>
-  <%= @article.user.username %>
-</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @article.body %>
-</p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
