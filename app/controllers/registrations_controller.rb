@@ -9,6 +9,7 @@ class RegistrationsController < Devise::RegistrationsController
             :password_confirmation,
             :username,
             :firstname,
+            :avatar,
             :lastname
             )
         end
@@ -20,6 +21,7 @@ class RegistrationsController < Devise::RegistrationsController
             :current_password,
             :username,
             :firstname,
+            :avatar,
             :lastname
             )
         end

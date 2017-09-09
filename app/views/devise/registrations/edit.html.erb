@@ -13,6 +13,14 @@
     
     <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
     <%= f.input :password_confirmation, required: false %>
+    <div class="field">
+        <label for=""></label>
+        <%= f.file_field :avatar %>
+     
+        <% if @user.avatar? %>
+          <%= image_tag @user.avatar.url(:thumb) %>
+        <% end %>
+      </div>
     
   </div>
 
