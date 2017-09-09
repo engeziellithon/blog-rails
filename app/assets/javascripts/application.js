@@ -29,3 +29,4 @@ $(document).ready(function() {
         $(sel2).toggleClass('out');
     });
 });
+//= require serviceworker-companion
