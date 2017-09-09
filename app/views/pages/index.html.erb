@@ -32,7 +32,10 @@
      <% end %>
     </div>
     <% end %>
-    <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label:"Anterior", class:"will-page"%>
+    <%= will_paginate @articles, renderer: BootstrapPagination::Rails, previous_label:"Anterior", :page_links => false, class:"will-page"%>
+    <div class="page_info">
+        <%= page_entries_info @articles %>
+    </div>
     </div>
   </div>
 </section>
