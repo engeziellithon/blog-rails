@@ -10,7 +10,7 @@
               <%= @article.user.username %>
             <div class="date-topips-posts">
               <div class="date-post">
-              <%= @article.created_at.strftime("%d %b. %Y") %>
+              <%= @article.created_at.strftime("%d %b. %Y %H:%M") %>
               </div>
               <div>
                 <a href="/blog/topic/open-source" class="read-me">Topic</a>
@@ -21,12 +21,10 @@
           </div>
         </div>   
        </span>
-       <div class="blog-post__resource">
-          <%=  image_tag 'https://www.w3schools.com/css/img_fjords.jpg', class:"image-post-index"%>
-      </div>
+      
       <div class="body-post-index">
        <h2 class="text-post">
-          <%= @article.body %>   
+          <%= raw @article.body %>   
        </h2>
        
       </div>

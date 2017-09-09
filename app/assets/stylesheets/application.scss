@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap-sprockets";
- @import "bootstrap";
+
  @import "font-awesome-sprockets";
  @import "font-awesome";
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
  
 body {
@@ -93,12 +94,12 @@ pre {
 }
 .image-post-index{
     width: 100%;
-    height: 250px;
+    height: auto;
     position: relative;
     overflow: hidden;
     margin-bottom: 50px;
     border-radius: 6px;
-    box-shadow: 6px 17px 42px 22px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 36px 64px 0 rgba(0,0,0,.2);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -149,14 +150,11 @@ a:hover {
 }
 
 .pagination > li > a, .pagination > li > span {
-    position: relative;
-    float: left;
-    padding: 6px 12px;
+    
+    
     line-height: 1.428571429;
     text-decoration: none;
-    color:#910000;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    color:#910000; 
     margin-left: -1px;
     padding: 1.1em 1.6em !important;
 }

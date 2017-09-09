@@ -1,6 +1,6 @@
 <section class="post-index">
   <div>
-    <div class="col-md-6">
+    <div class="col-md-7">
         <% @articles.each do |article| %>
      <h1><%= link_to article.title, article, class:"large-title"%></h1>
      <span>
@@ -10,7 +10,7 @@
             <%=  article.user.username %>
           <div class="date-topips-posts">
             <div class="date-post">
-            <%= article.created_at.strftime("%d %b. %Y") %>
+            <%= article.created_at.strftime("%d %b. %Y %H:%M") %>
             </div>
             <div>
               <a href="/blog/topic/open-source" class="read-me">Topic</a>
@@ -22,11 +22,10 @@
       </div>   
      </span>
      <div class="blog-post__resource">
-        <%=  image_tag 'https://www.w3schools.com/css/img_fjords.jpg', class:"image-post-index"%>
     </div>
     <div class="body-post-index">
      <h2 class="text-post-index">
-        <%= (article.body).truncate_words(40) %>   
+        <%= raw article.body.truncate_words(40) %>   
      </h2>
      <%= link_to article, class:"read-me" do %> 
      Read me

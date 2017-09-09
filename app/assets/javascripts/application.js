@@ -14,7 +14,11 @@
 //= require turbolinks
 //= require jquery3 
 //= require bootstrap-sprockets
+//= require ckeditor/init
 //= require_tree .
+
+
+
 
 $(document).ready(function() {   
     var sideslider = $('[data-toggle=collapse-side]');
