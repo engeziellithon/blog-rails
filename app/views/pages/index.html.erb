@@ -5,7 +5,7 @@
      <h1><%= link_to article.title, article, class:"large-title"%></h1>
      <span>
       <div class="editor-post-info">
-          <%= image_tag article.user.avatar.url, class:"image-editor-index"%>
+          <%= image_tag article.user.avatar.url, :secure => true, class:"image-editor-index"%>
       <div>
             <%=  article.user.username %>
           <div class="date-topips-posts">
