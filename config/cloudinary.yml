@@ -1,18 +1,18 @@
 ---
 development:
-  cloud_name: drqunu7bs
+  cloud_name: verytech
   api_key: '649347319581474'
   api_secret: U9fowB_eOyEm9I1_ixa-wiLZsTk
   enhance_image_tag: true
   static_image_support: false
 production:
-  cloud_name: drqunu7bs
+  cloud_name: verytech
   api_key: '649347319581474'
   api_secret: U9fowB_eOyEm9I1_ixa-wiLZsTk
   enhance_image_tag: true
   static_image_support: true
 test:
-  cloud_name: drqunu7bs
+  cloud_name: verytech
   api_key: '649347319581474'
   api_secret: U9fowB_eOyEm9I1_ixa-wiLZsTk
   enhance_image_tag: true

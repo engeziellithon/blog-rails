@@ -17,16 +17,20 @@ class ArticlesController < ApplicationController
   # GET /articles/new
   def new
     @article = current_user.articles.build
+    @article = Article.new 
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /articles/1/edit
   def edit
+    @categories = Category.all.map {| c | [c.name, c.id]}
   end
 
   # POST /articles
   # POST /articles.json
   def create
     @article = current_user.articles.build(article_params)
+    @article.category_id = params[:category_id] 
 
     respond_to do |format|
       if @article.save
@@ -42,6 +46,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   # PATCH/PUT /articles/1.json
   def update
+    @article.category_id = params[:category_id]
     respond_to do |format|
       if @article.update(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }

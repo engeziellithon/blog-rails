@@ -1,7 +1,19 @@
 class Ckeditor::AttachmentFile < Ckeditor::Asset
   has_attached_file :data,
-                    url: '/ckeditor_assets/attachments/:id/:filename',
-                    path: ':rails_root/public/ckeditor_assets/attachments/:id/:filename'
+                    :storage => :cloudinary,
+                    :path => ':id/:style/:filename',
+                    :styles => { :data => '200x200>' },
+                    :cloudinary_url_options => {
+                        :default => {
+                            :secure => true
+                        },
+                        :styles => {
+                            :avatar => {
+                                :quality => 10,
+                                :transformation => [ { :angle => 20 } ]
+                            }
+                        }
+                    }
 
   validates_attachment_presence :data
   validates_attachment_size :data, less_than: 100.megabytes

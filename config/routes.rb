@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
     
+  resources :categories
+  get 'tags/:tags/:id', to: 'categories#show', as: :tag
+  
   mount Ckeditor::Engine => '/ckeditor'
     devise_for :users, :controllers => { registrations: 'registrations' }
     

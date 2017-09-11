@@ -3,9 +3,13 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+    <%= select_tag(:category_id, options_for_select(@categories || Category.all.map { |c| [ c.name, c.id ] }), :prompt => "Select one!")  %>
     <%= f.cktext_area :body %>
     
   </div>
+
+  <%= link_to 'New Category', new_category_path(@category), class:"btn btn-default" %>
+
 
   <div class="form-actions">
     <%= f.button :submit %>
