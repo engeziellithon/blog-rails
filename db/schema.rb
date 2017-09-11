@@ -51,14 +51,6 @@ ActiveRecord::Schema.define(version: 20170910175922) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "section_articles", force: :cascade do |t|
-    t.string "name"
-    t.integer "article_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_section_articles_on_article_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "username", default: "", null: false
     t.string "email", default: "", null: false
