@@ -5,7 +5,7 @@
        <h1><%= link_to @article.title, class:"large-title"%></h1>
        <span>
         <div class="editor-post-info">
-          <img src="https://images.moviepilot.com/image/upload/c_fill,h_64,q_auto,w_64/morgan-will-morgan-find-love-on-the-walking-dead-jpeg-203714.jpg" alt="" class="">
+          <%= image_tag @article.user.avatar.url, :secure => true, class:"image-editor-index"%>
           <div>
               <%= @article.user.username %>
             <div class="date-topips-posts">
@@ -33,7 +33,6 @@
       </div>
       
     </div>
-   
-  </section>
+</section>
 
 
